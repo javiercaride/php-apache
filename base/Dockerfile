@@ -1,4 +1,10 @@
 FROM php:8.1-apache
+LABEL maintainer="hola@javiercaride.dev"
+ENV REFRESHED_AT 2022-08-14
+
+# Setting non interactive method to avoid error
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
